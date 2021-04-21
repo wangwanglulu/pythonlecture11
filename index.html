@@ -650,10 +650,11 @@ filename = 'btc_close_2017.json'
 with open(filename) as f:
     btc_data = json.load(f)  
 
-date=[]; close=[]
+date=[]; close=[]; months=[]
 
 for btc_dict in btc_data:
     date.append(btc_dict['date'])
+    months.append(int(btc_dict['month']))
     close.append(int(float(btc_dict['close'])))
 </code></pre>
                     </div>
